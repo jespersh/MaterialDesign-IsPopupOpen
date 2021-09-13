@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,6 +25,17 @@ namespace WpfApp15
         {
             InitializeComponent();
             DataContext = new DemoModel();
+        }
+
+        private void PopupBox_Opened(object sender, RoutedEventArgs e)
+        {
+            Debug.WriteLine("Opened");
+        }
+
+        private void PopupBox_Closed(object sender, RoutedEventArgs e)
+        {
+
+            Debug.WriteLine("Closed");
         }
     }
 }

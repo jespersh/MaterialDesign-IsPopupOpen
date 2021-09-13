@@ -22,7 +22,9 @@
                                  VerticalAlignment="Center"
                                  StaysOpen="True"
                                  IsPopupOpen="{Binding IsPopupOpen}"
-                                 Padding="0">
+                                 Padding="0"
+                                 Opened="PopupBox_Opened"
+                                 Closed="PopupBox_Closed">
             <materialDesign:PopupBox.ToggleContent>
                 <StackPanel Orientation="Horizontal">
                     <TextBlock>Open</TextBlock>
