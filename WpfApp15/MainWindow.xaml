@@ -16,12 +16,13 @@
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <materialDesign:PopupBox Focusable="False"
+        <materialDesign:PopupBox x:Name="TestPop" 
+                                 Focusable="False"
                                  HorizontalAlignment="Center"
                                  PlacementMode="TopAndAlignRightEdges"
                                  VerticalAlignment="Center"
                                  StaysOpen="True"
-                                 IsPopupOpen="{Binding IsPopupOpen}"
+                                 IsPopupOpen="{Binding IsPopupOpen, UpdateSourceTrigger=PropertyChanged}"
                                  Padding="0"
                                  Opened="PopupBox_Opened"
                                  Closed="PopupBox_Closed">
@@ -36,8 +37,12 @@
 
         <StackPanel Grid.Row="1">
             <TextBlock>
-            <Run>IsPopupOpen state:</Run>
-            <Run Text="{Binding IsPopupOpen}"/>
+            <Run>DataContext IsPopupOpen state:</Run>
+            <Run Text="{Binding IsPopupOpen, UpdateSourceTrigger=PropertyChanged}"/>
+            </TextBlock>
+            <TextBlock>
+            <Run>Element IsPopupOpen state:</Run>
+            <Run Text="{Binding IsPopupOpen, ElementName=TestPop}"/>
             </TextBlock>
             <TextBlock>
             <Run>Checkbox YesNo state:</Run>
