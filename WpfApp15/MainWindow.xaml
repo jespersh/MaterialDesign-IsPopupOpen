@@ -22,7 +22,7 @@
                                  PlacementMode="TopAndAlignRightEdges"
                                  VerticalAlignment="Center"
                                  StaysOpen="True"
-                                 IsPopupOpen="{Binding IsPopupOpen, UpdateSourceTrigger=PropertyChanged}"
+                                 IsPopupOpen="{Binding IsPopupOpen, Mode=TwoWay}"
                                  Padding="0"
                                  Opened="PopupBox_Opened"
                                  Closed="PopupBox_Closed">
